@@ -2,9 +2,13 @@ import { call, put, takeEvery } from 'redux-saga/effects';
 import axios from 'axios';
 import { FETCH_DATA_REQUEST, fetchDataSuccess, fetchDataFailure } from './actions';
 
+
+const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 function* fetchDataSaga() {
   try {
-    const response = yield call(axios.get, 'http://52.168.1.54:8080/api/v1/userActivities');
+
+    const response = yield call(axios.get, `${BASE_URL}/api/v1/userActivities`);
     yield put(fetchDataSuccess(response.data));
   } catch (error) {
     yield put(fetchDataFailure(error.message));

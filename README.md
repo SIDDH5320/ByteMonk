@@ -1,70 +1,130 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# ByteMonk
 
-In the project directory, you can run:
+ByteMonk is a React application that displays data fetched from an API in both table and pie chart formats. It uses Redux for state management and Redux-Saga for handling side effects. The app includes a filtering feature to refine the displayed data based on user and category.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Data Fetching**: Uses Redux-Saga to fetch data from a REST API.
+- **Data Visualization**: Displays data in table and pie chart formats.
+- **Filtering**: Allows filtering by user and category.
+- **View Toggle**: Switch between table and pie chart views using a toggle switch.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies
 
-### `npm test`
+- React
+- Redux
+- Redux-Saga
+- Ant Design (for UI components)
+- Recharts (for pie charts)
+- Axios (for HTTP requests)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (v14.x or later)
+- npm or Yarn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the Repository**
 
-### `npm run eject`
+   ```bash
+   git clone https://github.com/SIDDH5320/ByteMonk.git
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Navigate to the Project Directory**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   cd ByteMonk
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Install Dependencies**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm install
+   ```
 
-## Learn More
+   or if you prefer Yarn:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   yarn install
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Configuration
 
-### Code Splitting
+1. **Set Up Environment Variables**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   Create a `.env` file in the root directory and add the following:
 
-### Analyzing the Bundle Size
+   ```env
+   REACT_APP_API_BASE_URL=http://52.168.1.54:8080
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   Adjust the base URL according to your environment.
 
-### Making a Progressive Web App
+### Running the Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. **Start the Development Server**
 
-### Advanced Configuration
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   or if you prefer Yarn:
+
+   ```bash
+   yarn start
+   ```
+
+   The app will be available at `http://localhost:3000`.
+
+### Building for Production
+
+1. **Build the Application**
+
+   ```bash
+   npm run build
+   ```
+
+   or if you prefer Yarn:
+
+   ```bash
+   yarn build
+   ```
+
+   The production build will be in the `build` directory.
+
+### Testing
+
+1. **Run Tests**
+
+   ```bash
+   npm test
+   ```
+
+   or if you prefer Yarn:
+
+   ```bash
+   yarn test
+   ```
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To deploy your application, you can use various platforms like Vercel, Netlify, or GitHub Pages. Refer to their documentation for detailed instructions.
 
-### `npm run build` fails to minify
+### Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Fork the Repository**
+2. **Create a New Branch**
+3. **Make Your Changes**
+4. **Submit a Pull Request**
+
+Please ensure your changes align with the project's coding standards and pass all tests.
+
+### License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
